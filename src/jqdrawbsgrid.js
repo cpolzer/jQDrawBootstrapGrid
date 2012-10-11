@@ -42,7 +42,10 @@
             var $this = jQuery(this),
                 i = 0,
                 height = $this.innerHeight() + 'px',
-                $gridEl = jQuery('<div></div>').addClass('grid').css("position", "absolute"),
+                leftmargin = jQuery('[class*=\'span\']').css('marginLeft'),
+                $gridEl = jQuery('<div></div>').addClass('grid')
+                    .css("position", "absolute")
+                    .css("margin-left", leftmargin),
 
                 $showHideButton = jQuery('<button></button>')
                     .addClass("btn btn-primary")
