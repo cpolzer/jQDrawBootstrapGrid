@@ -15,7 +15,10 @@ Usage
 -----
  After adding the javascript source to your document,
  apply the plugin to the bootstrap ".container":
- jQuery(".container").drawBootstrapGrid();
+ 
+ ~~~~~~
+    jQuery(".container").drawBootstrapGrid();
+ ~~~~~~
 
 Options
 -------
