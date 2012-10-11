@@ -6,8 +6,9 @@ Note: By default automatically add a "show/hide grid" button and start in hidden
 
 Requirements
 ------------
-Twitter Bootstrap
-JQuery < 1.7.*
++ Twitter Bootstrap
+
++ JQuery < 1.7.*
 
 Usage
 -----
@@ -30,7 +31,7 @@ The default settings are:
 
  
 Support
--------
+------- 
 
 Have a question, or found an issue? Just create a issue: https://github.com/plozi/jQDrawBootstrapGrid/issues
 
@@ -49,6 +50,4 @@ Authors
 Copyright and License
 ---------------------
 
-
-The jQDrawBootstrapGrid Plugin is dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) 
-and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses. Copyright (c)2012 Christian Polzer.
+The jQDrawBootstrapGrid Plugin is  licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) licenses. Copyright (c)2012 Christian Polzer.
