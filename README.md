@@ -19,6 +19,7 @@ Usage
 Options
 -------
 The default settings are:
+~~~~~~
     {
         'columns':12,   //define how much columns to draw
         'singleColumnName': 'span1', //the css class name used in your bootstrap (just being caucious)
@@ -28,7 +29,7 @@ The default settings are:
         'startHidden':true, //if we want the grid to be shown initially
         'hiddenClassName': 'hidden' //the css class name used in your bootstrap to hide elements -> visibility: hidden
     }
-
+~~~~~~
  
 Support
 ------- 
