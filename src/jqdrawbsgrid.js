@@ -5,7 +5,7 @@
  * Time: 11:17
  *
  * Description:
- * A simple jQuery plugin to draw single grid lines.
+ * A simple jQuery plugin to draw single grid lines on non fluid rows
  * Usually applied to the bootstrap "container":
  * jQuery(".container").drawBootstrapGrid();
  *
@@ -32,7 +32,7 @@
             'columns':12,
             'singleColumnName': 'span1',
             'color':'lightgrey',
-            'opacity':0.3,
+            'opacity':0.4,
             'buttonLabel': 'Show/Hide Grid',
             'startHidden': true,
             'hiddenClassName': 'hidden'
@@ -42,21 +42,24 @@
             var $this = jQuery(this),
                 i = 0,
                 height = $this.innerHeight() + 'px',
-                leftmargin = jQuery('[class*=\'span\']').css('marginLeft'),
+            //leftmargin = jQuery('[class*=\'span\']').css('marginLeft'),
                 $gridEl = jQuery('<div></div>').addClass('grid')
                     .css("position", "absolute")
-                    .css("margin-left", leftmargin),
+                    //.css("margin-left", leftmargin)
+                    .css("top", '0')
+                    .css("z-index", '-2')
 
-                $showHideButton = jQuery('<button></button>')
-                    .addClass("btn btn-primary")
-                    .css('position','fixed')
-                    .css('top', '0')
-                    .css('right', '0')
-                    .css('margin','10px')
-                    .text(settings.buttonLabel)
-                    .click(function(){
-                        jQuery($gridEl).toggleClass(settings.hiddenClassName);
-                    })
+            $showHideButton = jQuery('<button></button>')
+                .addClass("btn btn-primary")
+                .css('position','fixed')
+                .css('top', '2em')
+                .css('right', '20px')
+                .css('margin','10px')
+                .css('z-index', '2000')
+                .text(settings.buttonLabel)
+                .click(function(){
+                    jQuery($gridEl).toggleClass(settings.hiddenClassName);
+                })
 
             if(settings.startHidden){
                 $gridEl.addClass(settings.hiddenClassName)
