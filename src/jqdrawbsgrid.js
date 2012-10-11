@@ -22,7 +22,7 @@
  *
  * Fork me at github: https://github.com/plozi/jQDrawBootstrapGrid
  */
- 
+
 ;(function ($) {
 
     $.fn.drawBootstrapGrid = function (options) {
@@ -42,10 +42,8 @@
             var $this = jQuery(this),
                 i = 0,
                 height = $this.innerHeight() + 'px',
-                $gridEl = jQuery('<div></div>').addClass('grid').css("position", "absolute")
-                if(settings.startHidden){
-                    $gridEl.addClass(settings.hiddenClassName);
-                }
+                $gridEl = jQuery('<div></div>').addClass('grid').css("position", "absolute"),
+
                 $showHideButton = jQuery('<button></button>')
                     .addClass("btn btn-primary")
                     .css('position','fixed')
@@ -57,8 +55,12 @@
                         jQuery($gridEl).toggleClass(settings.hiddenClassName);
                     })
 
+            if(settings.startHidden){
+                $gridEl.addClass(settings.hiddenClassName)
+            }
             $this.append($gridEl)
             $this.append($showHideButton)
+
             while (i < settings.columns) {
                 $gridEl.append(
                     jQuery('<div></div>')
