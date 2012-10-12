@@ -36,7 +36,7 @@
 
 <p>A simple jQuery plugin that draws grid columns to a twitter bootstrap layout. </p>
 
-<p>Note: By default it automatically adds a "show/hide grid" button and start in hidden mode.</p>
+<p>Note: By default it automatically adds a "show/hide grid" button and start in hidden mode and the shortcut key "l".</p>
 
 <h2>Requirements</h2>
 
@@ -55,15 +55,18 @@
 
 <p>The default settings are:</p>
 
-<pre><code>    {
-        'columns':12,   //define how much columns to draw
-        'singleColumnName': 'span1', //the css class name used in your bootstrap (just being caucious)
-        'color':'lightgrey', //each columns background color
-        'opacity':0.3,  //opacity of the rendered grid
-        'buttonLabel': 'Show/Hide Grid', //the label for the button
-        'startHidden':true, //if we want the grid to be shown initially
-        'hiddenClassName': 'hidden' //the css class name used in your bootstrap to hide elements -&gt; visibility: hidden
-    }
+<pre><code>
+    {
+        'columns':12,                     //define how much columns to draw
+         'singleColumnName': 'span1',     //the css class name which you want to add for one column
+        'color':'lightgrey',              //each columns background color
+        'opacity':0.3,                    //opacity of the rendered grid
+        'buttonLabel': 'Show/Hide Grid',  //the label for the button
+        'startHidden':true,               //if we want the grid to be shown initially
+         'includeMargin': false,          //if we include the original columns left margin
+        'hiddenClassName': 'hidden',      //the css class name used in your bootstrap to hide elements -> visibility: hidden
+        'keybinding': 'l'                 //hide/show grid on pressing this key
+       }
 </code></pre>
 
 <h2>Support</h2>
