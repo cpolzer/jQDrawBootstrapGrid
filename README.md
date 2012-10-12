@@ -7,7 +7,7 @@ A simple jQuery plugin that draws grid columns to a twitter bootstrap layout. Wo
 Defaults:
 --------
 +  By default it automatically adds a "show/hide grid" button and a key listener on the key 'l' (a small L that is).
-+  The preview grid also by default and starts in hidden mode
++  The preview grid also by default starts in hidden mode
 
 
 Requirements
