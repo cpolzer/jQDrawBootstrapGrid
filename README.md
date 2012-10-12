@@ -37,13 +37,14 @@ The default settings are:
     }
 ~~~~~~
 
-Support
--------
+Support and Contribution
+------------------------
+This little project is highly encouraging YOU to work on it!
 
 Have a question, or found an issue? Just create a issue: https://github.com/plozi/jQDrawBootstrapGrid/issues
 
 
-Authors
+Author
 -------
 
 **Christian Polzer**
@@ -52,6 +53,7 @@ Authors
 + http://twitter.com/polzifer
 + http://github.com/plozi
 + http://hai-fai.de
+
 
 
 Copyright and License
