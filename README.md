@@ -3,7 +3,9 @@ jQDrawBootstrapGrid
 
 A simple jQuery plugin that draws grid columns to a twitter bootstrap layout. Working better with non fluid layouts (container-fluid, row fluid).
 
-Note: By default it automatically adds a "show/hide grid" button and start in hidden mode and a key listener on the key 'l' (a small L that is).
+Note:
++By default it automatically adds a "show/hide grid" button and a key listener on the key 'l' (a small L that is).
++The preview grid also by default and starts in hidden mode
 
 Requirements
 ------------
