@@ -11,13 +11,15 @@
  *
  * Default settings:
  *  {
- *    'columns':12,   //define how much columns to draw
- *     'singleColumnName': 'span1', //the css class name used in your bootstrap (just being caucious)
- *    'color':'lightgrey', //each columns background color
- *    'opacity':0.3,  //opacity of the rendered grid
- *    'buttonLabel': 'Show/Hide Grid', //the label for the button
- *    'startHidden':true, //if we want the grid to be shown initially
- *    'hiddenClassName': 'hidden' //the css class name used in your bootstrap to hide elements -> visibility: hidden
+ *    'columns':12,                     //define how much columns to draw
+ *     'singleColumnName': 'span1',     //the css class name which you want to add for one column
+ *    'color':'lightgrey',              //each columns background color
+ *    'opacity':0.3,                    //opacity of the rendered grid
+ *    'buttonLabel': 'Show/Hide Grid',  //the label for the button
+ *    'startHidden':true,               //if we want the grid to be shown initially
+ *     'includeMargin': false,          //if we include the original columns left margin
+ *    'hiddenClassName': 'hidden',      //the css class name used in your bootstrap to hide elements -> visibility: hidden
+ *    'keybinding': 'l'                 //hide/show grid on pressing this key
  *   }
  *
  * Fork me at github: https://github.com/plozi/jQDrawBootstrapGrid
@@ -35,20 +37,24 @@
             'opacity':0.4,
             'buttonLabel': 'Show/Hide Grid',
             'startHidden': true,
-            'hiddenClassName': 'hidden'
+            'includeMargin': false,
+            'hiddenClassName': 'hidden',
+            'keybinding': 'l'
         }, options)
 
         return this.each(function () {
             var $this = jQuery(this),
                 i = 0,
                 height = $this.innerHeight() + 'px',
-                //leftmargin = jQuery('[class*=\'span\']').css('marginLeft'),
+
+                leftmargin =  jQuery('[class*=\'span\']').css('marginLeft'),
                 $gridEl = jQuery('<div></div>').addClass('grid')
                     .css("position", "absolute")
-                    //.css("margin-left", leftmargin)
                     .css("top", '0')
-                    .css("z-index", '-2')
-
+                    .css("z-index", '-20')
+                if(settings.includeMargin){
+                    $gridEl.css("margin-left", leftmargin)
+                }
                 $showHideButton = jQuery('<button></button>')
                     .addClass("btn btn-primary")
                     .css('position','fixed')
@@ -58,8 +64,10 @@
                     .css('z-index', '2000')
                     .text(settings.buttonLabel)
                     .click(function(){
-                        jQuery($gridEl).toggleClass(settings.hiddenClassName);
+                        jQuery($gridEl).toggleClass(settings.hiddenClassName)
                     })
+
+                $(document).bind('keydown', settings.keybinding, function(){jQuery($gridEl).toggleClass(settings.hiddenClassName)})
 
             if(settings.startHidden){
                 $gridEl.addClass(settings.hiddenClassName)
@@ -73,9 +81,7 @@
                         .addClass(settings.singleColumnName)
                         .css('background', settings.color)
                         .css('opacity', settings.opacity)
-                        .css('border-radius', '2px')
                         .css('height', height)
-                        .css('z-index', '-2')
                 )
                 i++
             }
