@@ -13,6 +13,7 @@ Defaults:
 DEMO
 ----
 The github pages feature a simple demo: http://plozi.github.com/jQDrawBootstrapGrid/example/ex.html
+ <img src="http://plozi.github.com/jQDrawBootstrapGrid/example/Bootstrap_ex_files/jQBSGrid_Screen.png" alt="screenshot of the demo site"/>
 
 
 Requirements
