@@ -10,9 +10,13 @@ Defaults:
 +  The preview grid also by default starts in hidden mode
 
 
-DEMO
+Demo
 ----
 The github pages feature a simple demo: http://plozi.github.com/jQDrawBootstrapGrid/example/ex.html
+
+
+Screenshot
+----------
  <img src="http://plozi.github.com/jQDrawBootstrapGrid/example/Bootstrap_ex_files/jQBSGrid_Screen.png" alt="screenshot of the demo site"/>
 
 
