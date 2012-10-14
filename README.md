@@ -3,7 +3,12 @@ jQDrawBootstrapGrid
 
 A simple jQuery plugin that draws grid columns to a twitter bootstrap layout. Working better with non fluid layouts (container-fluid, row fluid).
 
-Note: By default it automatically adds a "show/hide grid" button and start in hidden mode.
+
+Defaults:
+--------
++  By default it automatically adds a "show/hide grid" button and a key listener on the key 'l' (a small L that is).
++  The preview grid also by default starts in hidden mode
+
 
 DEMO
 ----
@@ -30,23 +35,26 @@ Options
 The default settings are:
 ~~~~~~
     {
-        'columns':12,   //define how much columns to draw
-        'singleColumnName': 'span1', //the css class name used in your bootstrap (just being caucious)
-        'color':'lightgrey', //each columns background color
-        'opacity':0.3,  //opacity of the rendered grid
-        'buttonLabel': 'Show/Hide Grid', //the label for the button
-        'startHidden':true, //if we want the grid to be shown initially
-        'hiddenClassName': 'hidden' //the css class name used in your bootstrap to hide elements -> visibility: hidden
+         'columns':12,                     //define how much columns to draw
+         'singleColumnName': 'span1',     //the css class name which you want to add for one column
+         'color':'lightgrey',              //each columns background color
+         'opacity':0.3,                    //opacity of the rendered grid
+         'buttonLabel': 'Show/Hide Grid',  //the label for the button
+         'startHidden':true,               //if we want the grid to be shown initially
+          'includeMargin': false,          //if we include the original columns left margin
+         'hiddenClassName': 'hidden',      //the css class name used in your bootstrap to hide elements -> visibility: hidden
+         'keybinding': 'l'                 //hide/show grid on pressing this key
     }
 ~~~~~~
 
-Support
--------
+Support and Contribution
+------------------------
+This little project is highly encouraging YOU to work on it!
 
 Have a question, or found an issue? Just create a issue: https://github.com/plozi/jQDrawBootstrapGrid/issues
 
 
-Authors
+Author
 -------
 
 **Christian Polzer**
@@ -55,6 +63,7 @@ Authors
 + http://twitter.com/polzifer
 + http://github.com/plozi
 + http://hai-fai.de
+
 
 
 Copyright and License
