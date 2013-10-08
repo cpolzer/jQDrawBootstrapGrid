@@ -67,7 +67,11 @@
                     jQuery($gridEl).toggleClass(settings.hiddenClassName)
                 })
 
-            $(document).bind('keydown', settings.keybinding, function(){jQuery($gridEl).toggleClass(settings.hiddenClassName)})
+            $(document).bind('keydown', function(ev) {
+                if (settings.keybinding.toUpperCase() === String.fromCharCode(ev.which)) {
+                    jQuery($gridEl).toggleClass(settings.hiddenClassName);
+                }
+            })
 
             if(settings.startHidden){
                 $gridEl.addClass(settings.hiddenClassName)
