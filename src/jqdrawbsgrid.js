@@ -38,7 +38,7 @@
             'buttonLabel': 'Show/Hide Grid',
             'startHidden': true,
             'includeMargin': false,
-            'hiddenClassName': 'hidden',
+            'hiddenClassName': 'invisible',
             'keybinding': 'l'
         }, options)
 
