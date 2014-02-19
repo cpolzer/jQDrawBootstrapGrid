@@ -18,7 +18,7 @@
  *    'buttonLabel': 'Show/Hide Grid',  //the label for the button
  *    'startHidden':true,               //if we want the grid to be shown initially
  *     'includeMargin': false,          //if we include the original columns left margin
- *    'hiddenClassName': 'hidden',      //the css class name used in your bootstrap to hide elements -> visibility: hidden
+ *    'hiddenClassName': 'invisible',      //the css class name used in your bootstrap to hide elements -> visibility: hidden
  *    'keybinding': 'l'                 //hide/show grid on pressing this key
  *   }
  *
@@ -38,7 +38,7 @@
             'buttonLabel': 'Show/Hide Grid',
             'startHidden': true,
             'includeMargin': false,
-            'hiddenClassName': 'hidden',
+            'hiddenClassName': 'invisible',
             'keybinding': 'l'
         }, options)
 
