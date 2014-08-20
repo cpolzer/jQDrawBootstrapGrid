@@ -74,4 +74,4 @@ Author
 Copyright and License
 ---------------------
 
-The jQDrawBootstrapGrid Plugin is  licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) licenses. Copyright (c)2012 Christian Polzer.
+The jQDrawBootstrapGrid Plugin is  licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) licenses. 
